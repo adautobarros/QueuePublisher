@@ -2,6 +2,8 @@
 {
     public interface IQueuePublish
     {
+        void Publish<T>(T entidade, string configPublishSectionRabbitMQ);
+        void Publish<T>(T entidade, RabbitInfoQueuePublushConfiguration info);
         void Publish<T>(T Item, string exchangeName = "", string exchangeType = ExchangeType.Direct, string routingKey = "", string queueName = "");
     }
 
