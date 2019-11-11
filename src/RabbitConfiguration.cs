@@ -25,13 +25,13 @@
     public class RabbitInfoQueuePublushConfiguration
     {
         public string ExchangeName { get; set; }
-        public string ExchangeType { get; set; }
         public string RoutingKey { get; set; }
-        public string QueueName { get; set; }
     }
 
     public class RabbitInfoQueueConfiguration : RabbitInfoQueuePublushConfiguration
     {
+        public string ExchangeType { get; set; }
+        public string QueueName { get; set; }
         public int NumberOfWorkroles { get; set; }
     }
 }

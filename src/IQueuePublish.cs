@@ -4,7 +4,7 @@
     {
         void Publish<T>(T entidade, string configPublishSectionRabbitMQ);
         void Publish<T>(T entidade, RabbitInfoQueuePublushConfiguration info);
-        void Publish<T>(T Item, string exchangeName = "", string exchangeType = ExchangeType.Direct, string routingKey = "", string queueName = "");
+        void Publish<T>(T Item, string exchangeName, string routingKey);
     }
 
     public static class ExchangeType
@@ -13,5 +13,5 @@
         public const string Fanout = "fanout";
         public const string Headers = "headers";
         public const string Topic = "topic";
-    }  
+    }
 }
