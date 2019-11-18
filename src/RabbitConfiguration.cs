@@ -30,8 +30,9 @@
 
     public class RabbitInfoQueueConfiguration : RabbitInfoQueuePublushConfiguration
     {
-        public string ExchangeType { get; set; }
+        public string ExchangeType { get; set; } = QueuePublisher.ExchangeType.Direct;
         public string QueueName { get; set; }
-        public int NumberOfWorkroles { get; set; }
+        public int NumberOfWorkroles { get; set; } = 1;
+        public bool CreateDeadLetterQueue { get; set; } = false;
     }
 }
